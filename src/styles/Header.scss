@@ -1,0 +1,43 @@
+header {
+    nav {
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            align-items: center;
+
+            a {
+                margin-left: 50px;
+                font-family: Montserrat;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 34px;
+                letter-spacing: 0em;
+                text-align: right;
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 748px) {
+    header {
+        nav {
+            img {
+                height: 47px;
+            }
+
+            div {
+                a {
+                    font-size: 12px;
+                    padding: 10px 10px;
+                    text-transform: uppercase;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+
+}
