@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Sophie Bluel - Architecte d'intérieur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+    rel="stylesheet" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+  <!-- <div>
+      <a href="#modal1">ouvrir la boite modale </a>
+      <aside
+        id="modal1"
+        class="modal"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="false"
+      >
+        <div class="modal-wrapper">
+          <h2>Galerie photo</h2>
+        </div>
+      </aside>
+    </div> -->
+  <div class="banner">
+    <button class="button">
+      <img src="./assets/icons/edit.png" alt="bouton édition" />
+      <span>Mode édition</span>
+    </button>
+  </div>
+  <header>
+    <a href="./index.html">
+      <h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="./index.html">projets</a></li>
+        <li>contact</li>
+        <li><a href="./page/login.html" id="login">login</a></li>
+        <li><img src="./assets/icons/instagram.png" alt="Instagram" /></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="introduction">
+      <figure>
+        <img src="./assets/images/sophie-bluel.jpg" alt="" />
+      </figure>
+      <article>
+        <h2>Designer d'espace</h2>
+        <p>
+          Je raconte votre histoire, je valorise vos idées. Je vous accompagne
+          de la conception à la livraison finale du chantier.
+        </p>
+        <p>
+          Chaque projet sera étudié en commun, de façon à mettre en valeur les
+          volumes, les matières et les couleurs dans le respect de l’esprit
+          des lieux et le choix adapté des matériaux. Le suivi du chantier
+          sera assuré dans le souci du détail, le respect du planning et du
+          budget.
+        </p>
+        <p>
+          En cas de besoin, une équipe pluridisciplinaire peut-être constituée
+          : architecte DPLG, décorateur(trice)
+        </p>
+      </article>
+    </section>
+    <section id="portfolio">
+      <h2>
+        Mes Projets
+        <button id="edit-modal" class="button">
+          <img src="./assets/icons/edit.svg" alt="bouton édition" />
+          <span>Mode édition</span>
+        </button>
+      </h2>
+      <div id="filter"></div>
+      <div class="gallery"></div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Vous avez un projet ? Discutons-en !</p>
+      <form action="#" method="post">
+        <label for="name">Nom</label>
+        <input type="text" name="name" id="name" />
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <input type="submit" value="Envoyer" />
+      </form>
+    </section>
+    <div id="modal" class="modal">
+      <div class="modal-main">
+        <btn id="modal-btn-close">X</btn>
+        <btn id="modal-btn-back">
+          <img src="./assets/icons/arrow_back.png" alt="arrow back">
+        </btn>
+        <h1>Galerie photo</h1>
+        <section class="gallery"></section>
+        <btn id="btn-add-picture">Ajouter une photo</btn>
+        <section class="form" id="form-add-picture">
+          <form enctype="multipart/form-data">
+            <div id="container-picture">
+              <img id="preview" src="./assets/icons/picture.png" alt="picture">
+              <label for="file-upload">+ Ajouter photo</label>
+              <input id="file-upload" type="file" accept="image/*">
+              <span>jpg, png: 4mo max</span>
+            </div>
+            <div id="file-error" class="input-error">Veuillez charger une image au format jpg, jpeg ou png
+              inférieure à 4 Mo</div>
+            <label for="title">Titre</label>
+            <input type="text" name="title" id="title">
+            <div id="title-error" class="input-error">Veuillez renseigner un titre valide avec au moins 2
+              caractères</div>
+            <label for="select-category">Catégorie</label>
+            <select id="select-category"></select>
+            <div id="select-error" class="input-error">Veuillez sélectionner une catégorie valide</div>
+            <hr>
+            <input type="submit" value="Valider" class="disabled">
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <nav>
+      <ul>
+        <li>Mentions Légales</li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="./scripts/api.js"></script>
+  <script src="./scripts/modal.js"></script>
+  <script src="./scripts/index.js"></script>
+</body>
+
+</html>
